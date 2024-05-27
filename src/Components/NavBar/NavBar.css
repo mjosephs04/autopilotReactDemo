@@ -1,0 +1,77 @@
+.navbar{
+    max-width: 100%; /* Adjust max-width as needed */
+    background-color: #424242;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.logo-selection{
+    display: flex;
+    flex: 1;
+    justify-content: left;
+    height: 65px;
+}
+
+.links{
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 65px;
+}
+
+.logo{
+    height: 40px;
+    width: auto;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.setting-icon{
+    height: 35px;
+    width: auto;
+    margin-right: 20px;
+    margin-top: 16px;
+    padding-left: 15px;
+}
+
+.user{
+    display: flex;
+    flex: 1;
+    justify-content: right;
+    flex-direction: row;
+    height: 65px;
+}
+/* src/assets/fonts/fonts.css */
+@font-face {
+    font-family: 'Antebas';
+    src: url('../Assets/fonts/Antebas.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.home-link{
+    text-decoration: none;
+    font-family: 'Antebas';
+    font-size: 35px;
+    color: #ffffff;
+    margin-top: 12px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
