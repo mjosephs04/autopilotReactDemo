@@ -1,20 +1,76 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './NavBar.css'
 import autopilotLogo from '../Assets/autopilot-logo.png'
 import settingIcon from '../Assets/setting-icon.png'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
+import axios from "axios";
 
 function NavBar() {
+
+    const navigate = useNavigate();
+    const [username, setUsername] = useState('');
+    const checkLoggedIn = () =>{
+        axios({
+            url:'http://localhost:4000/isLoggedIn',
+            method: "POST",
+            data: {
+                query:
+                    ' {\n' +
+                    '     loggedIn{\n' +
+                    '     response\n' +
+                    ' }\n' +
+                    ' }'
+            }
+        }).then((result) => {
+            // console.log(result.data.data.loggedIn.response)
+            if(result.data.data.loggedIn.response === false){
+                navigate('/error-404')
+            }
+        }).catch(err =>{
+            console.log("error: " + err)
+        })
+    }
+
+    const getUserName = () => {
+        axios({
+            url:'http://localhost:4000/isLoggedIn',
+            method: "POST",
+            data: {
+                query:
+                    '{\n' +
+                    '    getUserName {\n' +
+                    '    userName\n' +
+                    '}\n' +
+                    '}'
+            }
+        }).then((result) => {
+            // console.log(result.data.data.getUserName.userName)
+            if(result.data.data.getUserName.userName === ""){
+                navigate('/error-404')
+            } else{
+                setUsername(result.data.data.getUserName.userName)
+            }
+        }).catch(err =>{
+            console.log("error: " + err)
+        })
+    }
+
+    useEffect(() => {
+        checkLoggedIn();
+        getUserName();
+    }, []);
+
+
     return (
         <div className='navbar'>
             <div className='logo-selection'>
-                <Link to='/'>
+                <Link to='/home'>
                     <img src={autopilotLogo} className='logo' alt='autopilot logo'/>
                 </Link>
             </div>
 
             <div className='links'>
-                <Link to='/'>
+                <Link to='/home'>
                     <p className='home-link'>Home</p>
                 </Link>
                 <Link to='/users'>
@@ -29,7 +85,7 @@ function NavBar() {
             </div>
 
             <div className='user'>
-            <h1 className='home-link'>USER</h1>
+            <h1 className='home-link'>{username}</h1>
                 <Link to='/settings'>
                     <img src={settingIcon} className='setting-icon' alt='settings icon'/>
                 </Link>
