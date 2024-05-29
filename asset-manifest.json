@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d134adab.css",
+    "main.js": "/static/js/main.c2d42156.js",
+    "static/js/453.3646d2f0.chunk.js": "/static/js/453.3646d2f0.chunk.js",
+    "static/media/background-countach.png": "/static/media/background-countach.4c006662fc964b8ccfac.png",
+    "static/media/setting-icon.png": "/static/media/setting-icon.595a99af9cba372f12fc.png",
+    "static/media/schwab-logo.png": "/static/media/schwab-logo.d05c54c60e2493b48472.png",
+    "static/media/steeringWheel.png": "/static/media/steeringWheel.23f65a4cd124c59b00e9.png",
+    "static/media/Robinhood-logo.png": "/static/media/Robinhood-logo.b437950cf36ea4314a59.png",
+    "static/media/TD-logo.png": "/static/media/TD-logo.2082ae9fc2de422cacc3.png",
+    "static/media/fidelity-logo.png": "/static/media/fidelity-logo.d641fa85e8adb55df7b7.png",
+    "static/media/webull-logo.png": "/static/media/webull-logo.eb0af7ad0f9cc2f0024c.png",
+    "static/media/Antebas.woff": "/static/media/Antebas.1faa05b53942dbe0a3d5.woff",
+    "index.html": "/index.html",
+    "main.d134adab.css.map": "/static/css/main.d134adab.css.map",
+    "main.c2d42156.js.map": "/static/js/main.c2d42156.js.map",
+    "453.3646d2f0.chunk.js.map": "/static/js/453.3646d2f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d134adab.css",
+    "static/js/main.c2d42156.js"
+  ]
+}
