@@ -1,4 +1,4 @@
-# Demo for Autopilot
+# React Demo for Autopilot
 Only a demo of my react and graphQL skills, none of this is anywhere close to prod ready.
 
 # Instructions to run locally
