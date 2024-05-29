@@ -13,32 +13,33 @@ const Login = () => {
 
     const verifyCredentials = () =>{
 
+        navigate('/home')
         // console.log(username)
         // console.log(password)
-        axios({
-            url:'http://localhost:4000/authentication',
-            method: "POST",
-            data: {
-                query:
-                    '{\n' +
-                    '  verify(username: "' + username + '"' +
-                    ', password: "' + password +
-                    '") {\n' +
-                    '    response\n' +
-                    '  }\n' +
-                    '}\n'
-            }
-        }).then((result) => {
-            // console.log(result.data.data.verify.response)
-            if(result.data.data.verify.response === true){
-                navigate('/home')
-            }else{
-                alert("Username or Password not valid")
-                // navigate('/login-error')
-            }
-        }).catch(err =>{
-            console.log("error: " + err)
-        })
+        // axios({
+        //     url:'http://localhost:4000/authentication',
+        //     method: "POST",
+        //     data: {
+        //         query:
+        //             '{\n' +
+        //             '  verify(username: "' + username + '"' +
+        //             ', password: "' + password +
+        //             '") {\n' +
+        //             '    response\n' +
+        //             '  }\n' +
+        //             '}\n'
+        //     }
+        // }).then((result) => {
+        //     // console.log(result.data.data.verify.response)
+        //     if(result.data.data.verify.response === true){
+        //         navigate('/home')
+        //     }else{
+        //         alert("Username or Password not valid")
+        //         // navigate('/login-error')
+        //     }
+        // }).catch(err =>{
+        //     console.log("error: " + err)
+        // })
 
     }
     const checkLoggedIn = () =>{
@@ -74,21 +75,21 @@ const Login = () => {
                 <div className='login-card'>
                     <img src={wheelLogo} className='wheelLogo' alt='wheel logo'/>
                     <div className='fields'>
-                        <div className='username'>
-                            <p>Username: </p>
-                            <input type='text'
-                                   className='username-input'
-                                   placeholder="Username"
-                                   onChange={evt => setUsername(evt.target.value)}/>
-                        </div>
+                        {/*<div className='username'>*/}
+                        {/*    <p>Username: </p>*/}
+                        {/*    <input type='text'*/}
+                        {/*           className='username-input'*/}
+                        {/*           placeholder="Username"*/}
+                        {/*           onChange={evt => setUsername(evt.target.value)}/>*/}
+                        {/*</div>*/}
 
-                        <div className='password'>
-                            <p>Password: </p>
-                            <input type='text'
-                                   className='password-input'
-                                   placeholder="Password"
-                                   onChange={evt => setPassword(evt.target.value)}/>
-                        </div>
+                        {/*<div className='password'>*/}
+                        {/*    <p>Password: </p>*/}
+                        {/*    <input type='text'*/}
+                        {/*           className='password-input'*/}
+                        {/*           placeholder="Password"*/}
+                        {/*           onChange={evt => setPassword(evt.target.value)}/>*/}
+                        {/*</div>*/}
 
                         <div className='signIn-container'>
                             <button className='signIn-button' onClick={verifyCredentials}>Sign In</button>

@@ -46,7 +46,7 @@ function NavBar() {
         }).then((result) => {
             // console.log(result.data.data.getUserName.userName)
             if(result.data.data.getUserName.userName === ""){
-                navigate('/error-404')
+                // navigate('/error-404')
             } else{
                 setUsername(result.data.data.getUserName.userName)
             }
