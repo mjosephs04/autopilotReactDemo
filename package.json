@@ -2,7 +2,7 @@
   "name": "autopilot-backend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://autopilotReactDemo.github.io",
+  "homepage": "https://mjosephs04.github.io/autopilotReactDemo/",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@testing-library/jest-dom": "^5.17.0",
