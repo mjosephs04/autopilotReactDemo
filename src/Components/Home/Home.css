@@ -1,0 +1,176 @@
+
+.growth-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #424242;
+    animation: fadeDropInLeft 5s;
+
+
+    .growth-card{
+        width: 80%;
+        height: 30%;
+        background-color: #d4d4d4;
+        border: 1.5px solid black;
+        border-radius: 10px;
+
+        .growth{
+            margin-left: 20px;
+            margin-top: 30px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .data{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            text-align: center;
+            margin-top: -60px;
+            .user-data{
+                flex: 1;
+                .user-number{
+                    font-weight: bold;
+                    font-size: 60px;
+                }
+            }
+
+            .subscription-data{
+                flex: 1;
+                .user-number{
+                    font-weight: bold;
+                    font-size: 60px;
+                }
+            }
+
+            .social-media-data{
+                flex: 1;
+                .user-number{
+                    font-weight: bold;
+                    font-size: 60px;
+                }
+            }
+
+            .labels{
+                margin-top: -30px;
+                font-size: 30px;
+            }
+        }
+
+    }
+}
+
+.status-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #424242;
+    animation: fadeDropInRight 5s;
+
+    .status-card{
+        /*animation: dropIn 5s;*/
+        width: 80%;
+        height: 40%;
+        background-color: #d4d4d4;
+        border: 1.5px solid black;
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .status{
+            margin-left: 20px;
+            margin-top: 30px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .data{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            text-align: center;
+
+            .card {
+                flex: 1;
+                align-items: center;
+                .circle{
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin: auto;
+                }
+
+
+
+                .robinhood-logo{
+                    margin: auto;
+                    width: 200px;
+                    height: auto;
+                    padding-top: 12px;
+                }
+                .schwab-logo{
+                    height: 50px;
+                    width: auto;
+                    padding-top: 10px;
+                }
+
+                .fidelity-logo{
+                    margin: auto;
+                    width: 200px;
+                    height: auto;
+                    padding-top: 10px;
+                }
+
+                .td-logo{
+                    margin: auto;
+                    width: 200px;
+                    height: auto;
+                    padding-top: 15px;
+                }
+
+                .webull-logo{
+                    margin: auto;
+                    width: 200px;
+                    height: auto;
+                    padding-top: 5px;
+                }
+            }
+        }
+        .api-data{
+            margin-top: 7px;
+            margin-bottom: 0px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+@keyframes fadeDropInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeDropInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

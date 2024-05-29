@@ -1,0 +1,93 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-image: url("/src/Components/Assets/background-countach.png");
+
+    .login-card{
+        background-color: #d4d4d4;
+        width: 40%;
+        height: 60%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        animation: fadeIn 4s;
+
+        .wheelLogo{
+            animation: dropIn 3s;
+            flex: 1;
+            margin-top: 20px;
+            height: auto;
+            width: 125px;
+        }
+
+        .fields{
+            flex: 6;
+
+            .username{
+                margin-top: 40px;
+                display: flex;
+                flex-direction: row;
+                font-size: 30px;
+            }
+
+            .password{
+                display: flex;
+                flex-direction: row;
+                font-size: 30px;
+            }
+
+            .username-input{
+                margin: auto;
+                margin-left: 15px;
+                width: 300px;
+                height: 40px;
+            }
+
+            .password-input{
+                margin: auto;
+                margin-left: 22px;
+                width: 300px;
+                height: 40px;
+            }
+        }
+
+        .signIn-container{
+            display: flex;
+            justify-content: center;
+
+            .signIn-button{
+                margin-top: 50px;
+                width: 200px;
+                height: 40px;
+                font-size: 20px;
+                background-color: black;
+                color: white;
+
+                &:hover{
+                    background-color: #424242;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes dropIn {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

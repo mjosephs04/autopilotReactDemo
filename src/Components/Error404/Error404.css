@@ -1,0 +1,33 @@
+.errorContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-image: url("/src/Components/Assets/background-countach.png");
+
+    .error-card{
+        background-color: #d4d4d4;
+        width: 30%;
+        height: 30%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .wheelLogoError{
+            flex: 1;
+            margin-top: 20px;
+            height: auto;
+            width: 125px;
+        }
+
+        .errorMsg{
+            flex: 6;
+            margin-top: 20px;
+        }
+    }
+}
