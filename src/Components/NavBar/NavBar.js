@@ -118,9 +118,7 @@ function NavBar() {
                      onMouseEnter={handleMouseEnter}
                      onMouseLeave={handleMouseLeave}>
                     <h1 className='home-link'>{username}</h1>
-                    {/*<Link to='/settings'>*/}
                     <img src={settingIcon} className='setting-icon' alt='settings icon'/>
-                    {/*</Link>*/}
 
                 </div>
 

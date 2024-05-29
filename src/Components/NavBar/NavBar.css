@@ -48,6 +48,10 @@
     right: 0;
     top:65px;
     animation: fadeIn 1s;
+    font-family: 'Antebas', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    /*color: white;*/
 
     .dropdown{
         flex: 1;
