@@ -55,45 +55,91 @@ function NavBar() {
         })
     }
 
+    const logOut = () => {
+        axios({
+            url:'http://localhost:4000/isLoggedIn',
+            method: "POST",
+            data: {
+                query:
+                    'mutation logout{\n' +
+                    '    loggingOut\n' +
+                    '}'
+            }
+        }).then((result) => {
+            console.log(result)
+            if(result.status === 200){
+                navigate('/')
+            }
+        }).catch(err =>{
+            console.log("error: " + err)
+        })
+    }
+
     useEffect(() => {
         checkLoggedIn();
         getUserName();
     }, []);
 
+    const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+    const handleMouseEnter = () => {
+        setDropdownVisible(true);
+    };
+
+    const handleMouseLeave = () => {
+        setDropdownVisible(false);
+    };
 
     return (
-        <div className='navbar'>
-            <div className='logo-selection'>
-                <Link to='/home'>
-                    <img src={autopilotLogo} className='logo' alt='autopilot logo'/>
-                </Link>
-            </div>
+        <>
+            <div className='navbar'>
+                <div className='logo-selection'>
+                    <Link to='/home'>
+                        <img src={autopilotLogo} className='logo' alt='autopilot logo'/>
+                    </Link>
+                </div>
 
-            <div className='links'>
-                <Link to='/home'>
-                    <p className='home-link'>Home</p>
-                </Link>
-                <Link to='/users'>
-                    <p className='home-link'>Users</p>
-                </Link>
-                <Link to='/status'>
-                    <p className='home-link'>Status</p>
-                </Link>
+                <div className='links'>
+                    <Link to='/home'>
+                        <p className='home-link'>Home</p>
+                    </Link>
+                    <Link to='/users'>
+                        <p className='home-link'>Users</p>
+                    </Link>
+                    <Link to='/status'>
+                        <p className='home-link'>Status</p>
+                    </Link>
 
-                <p className='home-link'>Analytics</p>
-                <p className='home-link'>Incidents</p>
-            </div>
+                    <p className='home-link'>Analytics</p>
+                    <p className='home-link'>Incidents</p>
+                </div>
 
-            <div className='user'>
-            <h1 className='home-link'>{username}</h1>
-                <Link to='/settings'>
+                <div className='user'
+                     onMouseEnter={handleMouseEnter}
+                     onMouseLeave={handleMouseLeave}>
+                    <h1 className='home-link'>{username}</h1>
+                    {/*<Link to='/settings'>*/}
                     <img src={settingIcon} className='setting-icon' alt='settings icon'/>
-                </Link>
+                    {/*</Link>*/}
+
+                </div>
+
+                {isDropdownVisible && (
+                <div className='dropDown-container'
+                     onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}>
+                    <div className='dropdown'>
+                        <div className='my-account'>My Account</div>
+                        <div className='logout'
+                            onClick={logOut}>Logout</div>
+                    </div>
+                </div>
+                )}
             </div>
 
-        </div>
+        </>
 
-    );
+    )
 }
 
 export default NavBar;

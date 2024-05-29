@@ -37,6 +37,43 @@
     padding-left: 15px;
 }
 
+.dropDown-container{
+    position: absolute;
+    display: block;
+    width: 8%;
+    height: 10%;
+    background-color: darkgrey;
+    justify-content: right;
+    justify-self: right;
+    right: 0;
+    top:65px;
+    animation: fadeIn 1s;
+
+    .dropdown{
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+
+        .my-account{
+            flex:1;
+            border: 2px solid black;
+            justify-self: center;
+
+        }
+
+        .logout{
+            justify-self: center;
+            flex: 1;
+            border: 2px solid black;
+            border-top: 0;
+        }
+    }
+}
+
 .user{
     display: flex;
     flex: 1;
@@ -54,7 +91,7 @@
 
 .home-link{
     text-decoration: none;
-    font-family: 'Antebas';
+    font-family: 'Antebas', SansSerif;
     font-size: 35px;
     color: #ffffff;
     margin-top: 12px;
