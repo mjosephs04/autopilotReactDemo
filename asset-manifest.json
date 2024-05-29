@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/autopilotReactDemo/static/css/main.a61493b0.css",
-    "main.js": "/autopilotReactDemo/static/js/main.2014bb03.js",
+    "main.css": "/autopilotReactDemo/static/css/main.19b330e0.css",
+    "main.js": "/autopilotReactDemo/static/js/main.b2a0f22d.js",
     "static/js/453.3646d2f0.chunk.js": "/autopilotReactDemo/static/js/453.3646d2f0.chunk.js",
     "static/media/background-countach.png": "/autopilotReactDemo/static/media/background-countach.4c006662fc964b8ccfac.png",
     "static/media/setting-icon.png": "/autopilotReactDemo/static/media/setting-icon.595a99af9cba372f12fc.png",
@@ -13,12 +13,12 @@
     "static/media/webull-logo.png": "/autopilotReactDemo/static/media/webull-logo.eb0af7ad0f9cc2f0024c.png",
     "static/media/Antebas.woff": "/autopilotReactDemo/static/media/Antebas.1faa05b53942dbe0a3d5.woff",
     "index.html": "/autopilotReactDemo/index.html",
-    "main.a61493b0.css.map": "/autopilotReactDemo/static/css/main.a61493b0.css.map",
-    "main.2014bb03.js.map": "/autopilotReactDemo/static/js/main.2014bb03.js.map",
+    "main.19b330e0.css.map": "/autopilotReactDemo/static/css/main.19b330e0.css.map",
+    "main.b2a0f22d.js.map": "/autopilotReactDemo/static/js/main.b2a0f22d.js.map",
     "453.3646d2f0.chunk.js.map": "/autopilotReactDemo/static/js/453.3646d2f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a61493b0.css",
-    "static/js/main.2014bb03.js"
+    "static/css/main.19b330e0.css",
+    "static/js/main.b2a0f22d.js"
   ]
 }
